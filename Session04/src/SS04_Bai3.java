@@ -16,18 +16,18 @@ public class SS04_Bai3 {
             return;
         }
 
-        // 1) Tìm vị trí bắt đầu của "Kệ:"
+        
         int keyIndex = description.indexOf(keyword);
 
-        // 2) Vị trí bắt đầu lấy mã = sau "Kệ:"
+       
         int start = keyIndex + keyword.length();
 
-        // Bỏ khoảng trắng sau "Kệ:" nếu có
+        
         while (start < description.length() && description.charAt(start) == ' ') {
             start++;
         }
 
-        // 3) Tìm điểm kết thúc: dấu phẩy tiếp theo hoặc hết chuỗi (hoặc xuống dòng)
+        
         int commaIndex = description.indexOf(",", start);
         int newlineIndex = description.indexOf("\n", start);
 
@@ -42,12 +42,12 @@ public class SS04_Bai3 {
             end = Math.min(commaIndex, newlineIndex);
         }
 
-        // 4) Trích xuất mã vị trí
+        
         String locationCode = description.substring(start, end).trim();
 
         System.out.println("Vị trí tìm thấy: " + locationCode);
 
-        // 5) Thay "Kệ:" thành "Vị trí lưu trữ:" (thay đúng lần xuất hiện đó)
+       
         String newDescription =
                 description.substring(0, keyIndex)
                         + "Vị trí lưu trữ:"
@@ -58,3 +58,4 @@ public class SS04_Bai3 {
         sc.close();
     }
 }
+
