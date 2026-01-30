@@ -1,21 +1,18 @@
 import java.util.regex.Pattern;
 
 public class User {
-    // ===== Thuộc tính (Encapsulation) =====
     private String id;
     private String username;
     private String password;
     private String email;
 
-    // ===== Constructor đầy đủ =====
     public User(String id, String username, String password, String email) {
         this.id = id;
         this.username = username;
-        setPassword(password); // dùng setter để kiểm soát
-        setEmail(email);       // dùng setter để validate
+        setPassword(password); 
+        setEmail(email);      
     }
 
-    // ===== Getter =====
     public String getId() {
         return id;
     }
@@ -28,7 +25,7 @@ public class User {
         return email;
     }
 
-    // ===== Setter =====
+   
     public void setId(String id) {
         this.id = id;
     }
@@ -37,7 +34,6 @@ public class User {
         this.username = username;
     }
 
-    // Không cho password rỗng
     public void setPassword(String password) {
         if (password == null || password.trim().isEmpty()) {
             System.err.println("Password không được rỗng!");
@@ -46,7 +42,6 @@ public class User {
         }
     }
 
-    // Kiểm tra email hợp lệ
     public void setEmail(String email) {
         if (isValidEmail(email)) {
             this.email = email;
@@ -55,7 +50,7 @@ public class User {
         }
     }
 
-    // ===== Validate Email (Regex) =====
+   
     private boolean isValidEmail(String email) {
         if (email == null) return false;
 
@@ -63,7 +58,7 @@ public class User {
         return Pattern.matches(regex, email);
     }
 
-    // ===== Phương thức hiển thị (ẩn password) =====
+   
     public void display() {
         System.out.println("ID       : " + id);
         System.out.println("Username : " + username);
@@ -72,3 +67,4 @@ public class User {
         System.out.println("----------------------------");
     }
 }
+
