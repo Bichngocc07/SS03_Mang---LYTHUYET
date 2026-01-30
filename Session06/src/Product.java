@@ -1,17 +1,13 @@
 public class Product {
-    // ===== Thuộc tính (Encapsulation: private) =====
     private String maSP;
     private String tenSP;
     private double giaBan;
 
-    // ===== Constructor =====
     public Product(String maSP, String tenSP, double giaBan) {
         this.maSP = maSP;
         this.tenSP = tenSP;
-        setGiaBan(giaBan); // dùng setter để kiểm soát dữ liệu
+        setGiaBan(giaBan);
     }
-
-    // ===== Getter =====
     public String getMaSP() {
         return maSP;
     }
@@ -24,7 +20,6 @@ public class Product {
         return giaBan;
     }
 
-    // ===== Setter =====
     public void setMaSP(String maSP) {
         this.maSP = maSP;
     }
@@ -33,7 +28,6 @@ public class Product {
         this.tenSP = tenSP;
     }
 
-    // Setter có kiểm tra dữ liệu
     public void setGiaBan(double giaBan) {
         if (giaBan > 0) {
             this.giaBan = giaBan;
@@ -42,7 +36,6 @@ public class Product {
         }
     }
 
-    // ===== Phương thức hiển thị =====
     public void display() {
         System.out.println("Mã SP : " + maSP);
         System.out.println("Tên SP: " + tenSP);
@@ -50,3 +43,4 @@ public class Product {
         System.out.println("----------------------------");
     }
 }
+
