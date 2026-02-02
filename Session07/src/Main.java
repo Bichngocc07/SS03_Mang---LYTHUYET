@@ -73,24 +73,35 @@ public class Main {
 //        System.out.println("\n=== TỔNG QUỸ LỚP ===");
 //        System.out.println("Quỹ hiện tại: "
 //                + ClassRoom.getClassFund() + " VNĐ");
-        double[] scores = {6.5, 8.0, 4.5, 10.0};
+        // double[] scores = {6.5, 8.0, 4.5, 10.0};
 
-        System.out.println("=== KIỂM TRA ĐIỂM ===");
-        System.out.println("Thang điểm: "
-                + Config.MIN_SCORE + " → " + Config.MAX_SCORE);
-        System.out.println("Điểm đạt: " + Config.PASS_SCORE);
-        System.out.println();
+        // System.out.println("=== KIỂM TRA ĐIỂM ===");
+        // System.out.println("Thang điểm: "
+        //         + Config.MIN_SCORE + " → " + Config.MAX_SCORE);
+        // System.out.println("Điểm đạt: " + Config.PASS_SCORE);
+        // System.out.println();
 
-        for (double s : scores) {
+        // for (double s : scores) {
 
-            // Kiểm tra hợp lệ theo hằng số
-            if (s < Config.MIN_SCORE || s > Config.MAX_SCORE) {
-                System.out.println("Điểm " + s + " KHÔNG HỢP LỆ!");
-                continue;
-            }
+        //     // Kiểm tra hợp lệ theo hằng số
+        //     if (s < Config.MIN_SCORE || s > Config.MAX_SCORE) {
+        //         System.out.println("Điểm " + s + " KHÔNG HỢP LỆ!");
+        //         continue;
+        //     }
 
-            String result = (s >= Config.PASS_SCORE) ? "Đạt" : "Trượt";
-            System.out.println("Điểm " + s + ": " + result);
+        //     String result = (s >= Config.PASS_SCORE) ? "Đạt" : "Trượt";
+        //     System.out.println("Điểm " + s + ": " + result);
+        Student s1 = new Student("SV001", "Nguyễn Văn A");
+        Student s2 = new Student("SV002", "Trần Thị B");
+        Student s3 = new Student("SV003", "Lê Văn C");
+
+        // Gọi phương thức INSTANCE (từng sinh viên riêng)
+        s1.displayInfo();
+        s2.displayInfo();
+        s3.displayInfo();
+
+        // Gọi phương thức STATIC (dữ liệu dùng chung)
+        Student.showTotalStudent();
         }
     }
 }
