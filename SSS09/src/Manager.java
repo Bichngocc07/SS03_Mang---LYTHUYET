@@ -1,10 +1,8 @@
-// Manager.java
 public class Manager extends Employee {
     private String department;
 
-    // Constructor sử dụng super() để gọi constructor lớp cha
     public Manager(String name, double baseSalary, String department) {
-        super(name, baseSalary); // phải là dòng đầu tiên
+        super(name, baseSalary); 
         this.department = department;
     }
 
@@ -13,10 +11,10 @@ public class Manager extends Employee {
         return 0;
     }
 
-    // Ghi đè phương thức hiển thị thông tin
     @Override
     public void displayInfo() {
-        super.displayInfo(); // gọi lại phương thức lớp cha
+        super.displayInfo();
         System.out.println("Phòng ban: " + department);
     }
 }
+
