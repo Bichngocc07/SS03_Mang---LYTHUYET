@@ -1,4 +1,3 @@
-// ProductionEmployee.java
 public class ProductionEmployee extends Employee {
     private int productCount;
     private double wagePerProduct;
@@ -14,3 +13,4 @@ public class ProductionEmployee extends Employee {
         return productCount * wagePerProduct;
     }
 }
+
