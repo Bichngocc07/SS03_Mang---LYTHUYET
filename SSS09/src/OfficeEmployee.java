@@ -1,4 +1,3 @@
-// OfficeEmployee.java
 public class OfficeEmployee extends Employee {
     private double baseSalary;
     private double allowance;
@@ -14,3 +13,4 @@ public class OfficeEmployee extends Employee {
         return baseSalary + allowance;
     }
 }
+
